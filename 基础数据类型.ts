@@ -8,3 +8,27 @@ let arr2:Array<number> = [10,20,30]
 
 //元组类型：在定义数组时，类型和数据个数就确定了
 let arr3:[string,number,boolean] = ['gf',100,true]
+
+//枚举类型：枚举中每个数据值都可以叫做元素，每个元素都有自己的编号，编号默认从零开始，依次增加1
+enum Name{
+    g,
+    f
+}
+let firstName:Name = Name.g
+console.log(firstName) // 0
+console.log(Name.g,Name.f) // 0 1
+
+//any类型，当不确定变量为什么类型时可以使用any定义
+let str:any = 100
+let arr:any[] = [100,'gf',true]
+
+//void类型，声明未定义的变量
+//函数不返回值或反回undefined、null时
+function showName():void{
+    console.log(1)
+    //return undefined
+    return null
+
+}
+//定义一个void变量可以接收一个undefined的值，但意义不大
+let vd:void = undefined
