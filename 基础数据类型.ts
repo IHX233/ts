@@ -32,3 +32,21 @@ function showName():void{
 }
 //定义一个void变量可以接收一个undefined的值，但意义不大
 let vd:void = undefined
+
+//联合类型（Union Types），表示取值可以为多种类型中的一种
+function getString(str:string|number):string{
+    return str.toString()
+}
+
+//类型断言：告诉编译器，确定某变量的类型
+//断言格式：1、<类型>变量名 2、变量名 as 类型
+function getStringLength(str:string|number):number{
+    if((<string>str).length){ //如果不用断言会报错，因为不确定str是string还是number，number是没有length的
+        return (<string>str).length
+    }
+    return str.toString().length
+}
+
+//类型推断：没有明确一个变量的类型时，会自动为其推断一个类型
+let n = 100 //number类型
+let a //any类型
