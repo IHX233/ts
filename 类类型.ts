@@ -29,5 +29,6 @@
         const person2 = new Person2()
         person2.swim('ihx')
         person2.fly('ihx')
+        //类和接口之间叫实现（implements），接口和接口之间叫继承（extends）
     }
 )()
