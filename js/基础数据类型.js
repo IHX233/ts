@@ -20,7 +20,7 @@ console.log(Name.g, Name.f); // 0 1
 let str = 100;
 let arr = [100, 'gf', true];
 //void类型，声明未定义的变量
-//函数不返回值或反回undefined、null时
+//函数不返回值或反、返回undefined、null时
 function showName() {
     console.log(1);
     //return undefined
